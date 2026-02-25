@@ -1,0 +1,27 @@
+{
+  "name": "slopocalypse",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Track buggy software releases as evidence of AI-accelerated quality decline",
+  "scripts": {
+    "backfill": "tsx src/backfill.ts",
+    "monitor:create": "tsx src/monitor.ts create",
+    "monitor:poll": "tsx src/monitor.ts poll",
+    "monitor:delete": "tsx src/monitor.ts delete",
+    "dev": "tsx src/server.ts",
+    "start": "tsx src/server.ts",
+    "webhook": "tsx src/webhook-server.ts",
+    "view": "tsx src/view.ts",
+    "seed": "tsx src/seed-vercel.ts"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.3.0",
+    "parallel-web": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}
