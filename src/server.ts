@@ -11,6 +11,7 @@
  *   PORT=3456 npx tsx src/server.ts
  */
 
+import { Resvg } from "@resvg/resvg-js";
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import { readFileSync } from "node:fs";
 import { join, dirname } from "node:path";
@@ -154,6 +155,18 @@ function serveSvg(res: ServerResponse) {
   res.end(svg);
 }
 
+function servePng(res: ServerResponse) {
+  const count = readDataFile().length;
+  const svg = generateOgSvg(count);
+  const resvg = new Resvg(svg, { fitTo: { mode: "width", value: 1200 } });
+  const png = resvg.render().asPng();
+  res.writeHead(200, {
+    "Content-Type": "image/png",
+    "Cache-Control": "public, max-age=3600",
+  });
+  res.end(png);
+}
+
 function generateOgSvg(incidentCount: number): string {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
@@ -274,6 +287,8 @@ const server = createServer(async (req: IncomingMessage, res: ServerResponse) =>
     await handleSubmit(req, res);
   } else if (method === "GET" && url === "/og.svg") {
     serveSvg(res);
+  } else if (method === "GET" && url === "/og.png") {
+    servePng(res);
   } else if (method === "GET" && url === "/health") {
     json(res, 200, { status: "ok", incidents: readDataFile().length });
   } else {
