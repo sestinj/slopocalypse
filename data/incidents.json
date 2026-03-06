@@ -1,0 +1,372 @@
+[
+  {
+    "description": "The August 2024 security update for Windows 11 21H2 (KB5041592) caused issues for users with dual-boot setups for Windows and Linux. The update incorrectly applied a Secure Boot Advanced Targeting (SBAT) setting, preventing Linux from booting and displaying a 'Security Policy Violation' error. This issue was mitigated in later updates.",
+    "source_name": "Microsoft Learn",
+    "software": "Windows 11, version 21H2",
+    "source_url": "https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-21h2",
+    "title": "August 2024 security update might impact Linux boot in dual-boot setup devices",
+    "date_reported": "2024-08-13",
+    "severity": "major",
+    "vendor": "Microsoft"
+  },
+  {
+    "description": "The November 2024 update for Windows 11 24H2 caused systems to enter an endless cycle of crashing shortly after login, displaying a Blue Screen of Death (BSOD) with the stop code 'CRITICAL_PROCESS_DIED'. Users reported that rollback, restore points, and even fresh installs failed, rendering the system unusable until an older version of Windows 11 24H2 was installed.",
+    "source_name": "Microsoft Q&A",
+    "software": "Windows 11 24H2",
+    "source_url": "https://learn.microsoft.com/en-us/answers/questions/3945062/2024-11-update-of-windows-11-24h2-causing-endless",
+    "title": "2024.11 Update of Windows 11 24H2 Causing Endless BSOD On Loading",
+    "date_reported": "2024-11-13",
+    "severity": "critical",
+    "vendor": "Microsoft"
+  },
+  {
+    "description": "A user reported that their Windows 11 24H2 system became significantly buggier when a new update was pending installation. Issues included random freezes, BSODs, browser freezes, and failure of core functions like the right-click menu or Windows menu. These problems often occurred before the update was installed and sometimes triggered automatic updates.",
+    "source_name": "Reddit",
+    "software": "Windows 11 24H2",
+    "source_url": "https://www.reddit.com/r/WindowsHelp/comments/1o4qcf7/windows_11_becomes_buggy_every_time_there_are_new/",
+    "title": "Windows 11 becomes buggy every time there are new updates",
+    "date_reported": "2025-11-10",
+    "severity": "major",
+    "vendor": "Microsoft"
+  },
+  {
+    "description": "The Windows 11 24H2 update caused systems to crash with a Blue Screen of Death (BSOD) due to a conflict with the 'sprotect.sys' driver, which is part of specialized enterprise security software. Microsoft blocked the update for affected PCs and was working with SenseShield Technology to resolve the issue.",
+    "source_name": "ZDNET",
+    "software": "Windows 11 24H2",
+    "source_url": "https://www.zdnet.com/article/windows-11-24h2-is-crashing-on-many-pcs-due-to-conflict-with-security-driver/",
+    "title": "Windows 11 24H2 is crashing on many PCs due to conflict with security driver",
+    "date_reported": "2025-04-08",
+    "severity": "critical",
+    "vendor": "Microsoft"
+  },
+  {
+    "description": "The January Patch Tuesday update for Windows 11 24H2 caused installation failures or rollbacks on PCs with specific Citrix Session Recording Agent (SRA) versions. This issue primarily affected organizations and was being resolved in collaboration with Citrix.",
+    "source_name": "ZDNET",
+    "software": "Windows 11 24H2",
+    "source_url": "https://www.zdnet.com/article/10-pesky-windows-11-24h2-bugs-still-haunting-pcs-despite-several-patches/",
+    "title": "10 pesky Windows 11 24H2 bugs still haunting PCs despite several patches",
+    "date_reported": "2025-03-27",
+    "severity": "major",
+    "vendor": "Microsoft"
+  },
+  {
+    "description": "An authorization vulnerability (CVE-2025-24200) in iOS and iPadOS allowed attackers to disable USB Restricted Mode on locked devices. This could enable unauthorized data extraction, and Apple was aware of reports that it was exploited in sophisticated attacks.",
+    "source_name": "The Hacker News",
+    "software": "iOS 18.3.1 and iPadOS 18.3.1",
+    "source_url": "https://thehackernews.com/2025/02/apple-patches-actively-exploited-ios.html",
+    "title": "Apple Patches Actively Exploited iOS Zero-Day CVE-2025-24200 in Emergency Update",
+    "date_reported": "2025-02-11",
+    "severity": "critical",
+    "vendor": "Apple"
+  },
+  {
+    "description": "A vulnerability in ImageIO (CVE-2025-43300) in iOS 18.6.2 and iPadOS 18.6.2 allowed memory corruption when processing a malicious image file. Apple acknowledged awareness of reports that this issue may have been exploited in sophisticated attacks against targeted individuals.",
+    "source_name": "Apple Support",
+    "software": "iOS 18.6.2 and iPadOS 18.6.2",
+    "source_url": "https://support.apple.com/en-us/124925",
+    "title": "About the security content of iOS 18.6.2 and iPadOS 18.6.2",
+    "date_reported": "2025-08-20",
+    "severity": "critical",
+    "vendor": "Apple"
+  },
+  {
+    "description": "iOS 18.5 and companion updates patched critical bugs in AppleJPEG and CoreMedia, enabling arbitrary code execution through crafted media files. Additionally, vulnerabilities in CoreAudio, CoreGraphics, and ImageIO could lead to app crashes or data leaks, while WebKit flaws allowed hostile websites to execute code or crash Safari.",
+    "source_name": "SecurityWeek",
+    "software": "iOS 18.5",
+    "source_url": "https://www.securityweek.com/apple-patches-major-security-flaws-in-ios-macos-platforms/",
+    "title": "Apple Patches Major Security Flaws in iOS, macOS Platforms",
+    "date_reported": "2025-05-12",
+    "severity": "critical",
+    "vendor": "Apple"
+  },
+  {
+    "description": "A critical software bug in Google Cloud's Service Control component, triggered by a faulty policy update with blank fields, caused a null pointer exception. This led to a global outage affecting numerous Google services and third-party applications, rendering them inaccessible for hours.",
+    "source_name": "Medium",
+    "software": "Google Cloud",
+    "source_url": "https://medium.com/@tahirbalarabe2/%EF%B8%8Fhow-a-single-google-cloud-bug-caused-global-internet-outage-on-june-12-2025-652a83ad9e68",
+    "title": "How a Single Google Cloud Bug Caused Global Internet Outage on June 12, 2025",
+    "date_reported": "2025-06-12",
+    "severity": "critical",
+    "vendor": "Google"
+  },
+  {
+    "description": "The Android 15 operating system was launched with over 75 known critical bugs, impacting user experience and system stability. These issues were identified shortly after the update became available to Pixel devices.",
+    "source_name": "Medium (citing Pocketables)",
+    "software": "Android 15",
+    "source_url": "https://medium.com/quilltech/the-great-software-quality-collapse-how-we-normalized-catastrophe-96a6d51715f3",
+    "title": "Android 15 launched with 75+ known critical bugs",
+    "date_reported": "2024-10-01",
+    "severity": "critical",
+    "vendor": "Google"
+  },
+  {
+    "description": "Google Cloud experienced elevated error rates across numerous products in the us-east1 region. This incident affected a wide range of services, including databases, APIs, and AI platforms, leading to service disruptions for users.",
+    "source_name": "Google Cloud Service Health",
+    "software": "Google Cloud",
+    "source_url": "https://status.cloud.google.com/summary",
+    "title": "We are investigating elevated error rates with multiple products in us-east1",
+    "date_reported": "2025-07-18",
+    "severity": "major",
+    "vendor": "Google"
+  },
+  {
+    "description": "A faulty update released by CrowdStrike for its Falcon sensor software on July 19, 2024, caused widespread system crashes and bootloops on millions of Windows machines. This critical incident disrupted global operations across various sectors, including airlines, banking, and healthcare, and was characterized as one of the largest IT outages in history. The root cause was identified as a mismatch in configuration fields within the update, leading to an out-of-bounds memory read and subsequent system instability.",
+    "source_name": "PCMag",
+    "software": "CrowdStrike Falcon update on Windows 10 and Windows 11",
+    "source_url": "https://www.pcmag.com/news/massive-microsoft-outage-bricks-computers-halts-flights-worldwide",
+    "title": "Massive Microsoft Windows Outage Bricks PCs, Halts Flights Worldwide",
+    "date_reported": "2024-07-19",
+    "severity": "critical",
+    "vendor": "CrowdStrike"
+  },
+  {
+    "description": "Users reported losing all in-app preferences (workspace, plugins, etc.) after updating Adobe Creative Cloud applications to their 2025 versions. This led to significant workflow disruptions as users had to manually reconfigure settings or attempt complex workarounds.",
+    "source_name": "Adobe Community",
+    "software": "Adobe Creative Cloud (Photoshop, Illustrator, InDesign, After Effects, Premiere Pro)",
+    "source_url": "https://community.adobe.com/bug-reports-711/preferences-lost-when-update-to-2025-657611",
+    "title": "Preferences Lost when Update to 2025",
+    "date_reported": "2024-10-22",
+    "severity": "major",
+    "vendor": "Adobe"
+  },
+  {
+    "description": "Adobe Illustrator versions 29.8.2 and earlier (2025) and 28.7.10 and earlier (2024) on Windows had critical vulnerabilities. These flaws could allow for arbitrary code execution, posing a significant security risk to users.",
+    "source_name": "Adobe Security Bulletin",
+    "software": "Adobe Illustrator 2025, Adobe Illustrator 2024",
+    "source_url": "https://helpx.adobe.com/security/products/illustrator/apsb25-109.html",
+    "title": "APSB25-109 : Security update available for Adobe Illustrator",
+    "date_reported": "2025-11-11",
+    "severity": "critical",
+    "vendor": "Adobe"
+  },
+  {
+    "description": "Illustrator versions 28.7 to 29.6 on Windows could crash when copying or cutting any object due to interference from Windows Defender with the system clipboard. This significantly disrupted workflows for users performing these common operations.",
+    "source_name": "Adobe Help Center",
+    "software": "Adobe Illustrator",
+    "source_url": "https://helpx.adobe.com/illustrator/desktop/troubleshoot/known-and-fixed-issues.html",
+    "title": "Illustrator may crash when copying or cutting artwork",
+    "date_reported": "2025-09-03",
+    "severity": "major",
+    "vendor": "Adobe"
+  },
+  {
+    "description": "Adobe released security updates for the Creative Cloud Desktop Application in late 2025 (APSB25-120 on Dec 9, 2025, and APSB25-95 on Oct 14, 2025). These updates addressed security vulnerabilities, indicating that the software had potential security flaws.",
+    "source_name": "Adobe Security Bulletin",
+    "software": "Adobe Creative Cloud Desktop Application",
+    "source_url": "https://helpx.adobe.com/security/products/creative-cloud.html",
+    "title": "APSB25-120 : Security update available for Adobe Creative Cloud",
+    "date_reported": "2025-12-09",
+    "severity": "critical",
+    "vendor": "Adobe"
+  },
+  {
+    "description": "The NHTSA initiated an investigation into Tesla's Full Self-Driving (FSD) software due to reports of vehicles running red lights or crossing into wrong lanes. Over 50 such incidents were reported, with four leading to injuries. This probe followed a prior FSD investigation in October 2024 concerning crashes in low-visibility conditions.",
+    "source_name": "TechCrunch",
+    "software": "Full Self-Driving (FSD)",
+    "source_url": "https://techcrunch.com/2025/10/09/teslas-full-self-driving-software-under-investigation-for-traffic-safety-violations/",
+    "title": "Tesla's Full Self-Driving software under investigation for traffic safety violations",
+    "date_reported": "2025-10-01",
+    "severity": "major",
+    "vendor": "Tesla"
+  },
+  {
+    "description": "Two teenagers died in a February 2024 crash in Germany when their Tesla hit a tree and caught fire. Rescuers could not open the doors due to retracted handles, leading to the fatalities. A safety assessment concluded the failure of the door handles to extend automatically was a decisive factor in the deaths, highlighting a critical safety system failure.",
+    "source_name": "The Guardian",
+    "software": "Tesla Vehicle Safety Systems",
+    "source_url": "https://www.theguardian.com/technology/2025/jul/05/the-vehicle-suddenly-accelerated-with-our-baby-in-it-the-terrifying-truth-about-why-teslas-cars-keep-crashing",
+    "title": "‘The vehicle suddenly accelerated with our baby in it’: the terrifying truth about why Tesla’s cars keep crashing",
+    "date_reported": "2024-02-01",
+    "severity": "critical",
+    "vendor": "Tesla"
+  },
+  {
+    "description": "Samsung paused the rollout of its One UI 8 update for Galaxy S23 and S24 series devices due to issues, with some Android 16 upgrades being pulled mid-stream. This indicates significant problems with the update's stability or compatibility, affecting user experience.",
+    "source_name": "Forbes",
+    "software": "One UI 8 / Android 16 (update rollout)",
+    "source_url": "https://www.forbes.com/sites/zakdoffman/2025/10/24/samsung-issues-critical-update-for-most-galaxy-s24-and-s23-owners/",
+    "title": "Samsung Issues Critical Update For Most Galaxy S24 And S23 Owners",
+    "date_reported": "2025-10-24",
+    "severity": "major",
+    "vendor": "Samsung"
+  },
+  {
+    "description": "A race condition in DynamoDB's DNS management system caused an empty DNS record, leading to cascading failures across 37 AWS services for 15 hours. This paralyzed control plane operations, impacting thousands of companies and millions of users globally.",
+    "source_name": "Medium",
+    "software": "AWS services (US-EAST-1 Region, affecting 37 services including DynamoDB, EC2, Lambda, etc.)",
+    "source_url": "https://medium.com/@iamsubodhak/the-aws-outage-that-broke-the-internet-what-happened-and-why-it-matters-a289a6abd11d",
+    "title": "The AWS Outage That Broke the Internet: What Happened and Why It Matters",
+    "date_reported": "2025-10-20",
+    "severity": "critical",
+    "vendor": "AWS"
+  },
+  {
+    "description": "An AI coding tool (Koiro) erased its environment, resulting in a 13-hour disruption. Amazon stated that the incidents were due to user error, not AI error, though the tool's integration into workflows contributed to the problem.",
+    "source_name": "Tom's Hardware",
+    "software": "AWS services (affected by AI coding tool Koiro)",
+    "source_url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/multiple-aws-outages-caused-by-ai-coding-bot-blunder-report-claims-amazon-says-both-incidents-were-user-error",
+    "title": "Multiple AWS outages caused by AI coding bot blunder, report claims — Amazon says both incidents were 'user error'",
+    "date_reported": "2025-12-01",
+    "severity": "major",
+    "vendor": "AWS"
+  },
+  {
+    "description": "An inadvertent tenant configuration change within Azure Front Door caused an approximately 8-hour disruption, impacting Azure and Microsoft 365 services globally.",
+    "source_name": "CRN",
+    "software": "Azure Front Door (AFD), Microsoft 365",
+    "source_url": "https://www.crn.com/news/cloud/2025/the-10-biggest-cloud-outages-of-2025-aws-google-and-microsoft",
+    "title": "Microsoft Azure Outage",
+    "date_reported": "2025-10-29",
+    "severity": "major",
+    "vendor": "Microsoft"
+  },
+  {
+    "description": "The game *Planet Centauri* had a poor launch in December 2024 due to Valve's platform failing to notify users who had wishlisted the game. This technical oversight resulted in extremely low sales for the developers after a decade of work, significantly impacting their revenue. Valve later apologized for the issue.",
+    "source_name": "Polygon",
+    "software": "Planet Centauri",
+    "source_url": "https://www.polygon.com/valve-steam-alpha-centauri-launch-bug-daily-deal-terraria/",
+    "title": "Valve apologizes to devs for ruining game's Steam launch",
+    "date_reported": "2024-12-01",
+    "severity": "major",
+    "vendor": "Valve"
+  },
+  {
+    "description": "Released in June 2025, *MindsEye* was plagued by performance issues and a lack of freedom and substance. Over 90 staff members described its launch as \"one of the worst video game launches this decade,\" prompting an open letter calling for studio changes.",
+    "source_name": "IGN",
+    "software": "MindsEye",
+    "source_url": "https://www.ign.com/articles/the-biggest-disappointments-of-2025",
+    "title": "The Biggest Disappointments of 2025",
+    "date_reported": "2025-06-01",
+    "severity": "critical",
+    "vendor": "Build a Rocket Boy"
+  },
+  {
+    "description": "Launched in August 2024, *Concord* suffered from poor sales and low player counts, with estimates below 25,000 units sold. Due to its commercial failure, the game was pulled from sale, its servers were terminated, and the developing studio, Firewalk, was closed by Sony.",
+    "source_name": "Wikipedia",
+    "software": "Concord",
+    "source_url": "https://en.wikipedia.org/wiki/List_of_commercial_failures_in_video_and_arcade_games",
+    "title": "List of commercial failures in video and arcade games",
+    "date_reported": "2024-08-01",
+    "severity": "critical",
+    "vendor": "Firewalk Studios / Sony Interactive Entertainment"
+  },
+  {
+    "description": "Threat actors 'Scattered Lapsus$ Hunters' used voice phishing to gain access to Salesforce environments, resulting in the theft of approximately one billion customer records from about 40 organizations. This data theft could facilitate follow-on attacks.",
+    "source_name": "Onapsis",
+    "software": "Salesforce",
+    "source_url": "https://onapsis.com/blog/sap-salesforce-oracle-attacks-rising-2025-report/",
+    "title": "Voice Phishing leading to extortion leak site by \"Scattered Lapsus$ Hunters\"",
+    "date_reported": "2024-10-01",
+    "severity": "critical",
+    "vendor": "Salesforce"
+  },
+  {
+    "description": "A broad data theft campaign in 2025 targeted Salesforce customers using social engineering, voice phishing, and malicious replicas of legitimate tools. Attackers tricked employees into granting access, leading to the exfiltration of millions of records and subsequent extortion demands.",
+    "source_name": "Salesforce Ben",
+    "software": "Salesforce",
+    "source_url": "https://www.salesforceben.com/why-salesforce-orgs-got-hacked-so-much-in-2025-and-how-to-avoid-this-in-2026/",
+    "title": "Salesforce customers targeted in wide-ranging enterprise data theft campaign",
+    "date_reported": "2025-01-01",
+    "severity": "critical",
+    "vendor": "Salesforce"
+  },
+  {
+    "description": "A threat actor compromised OAuth tokens for the Drift integration with Salesforce, enabling access to data from over 700 organizations. Attackers systematically exported large volumes of records and searched for sensitive credentials.",
+    "source_name": "BlackFog",
+    "software": "Salesforce",
+    "source_url": "https://www.blackfog.com/the-salesforce-breach-wave-of-2025/",
+    "title": "Salesloft-Drift OAuth token breach impacts Salesforce data",
+    "date_reported": "2025-08-01",
+    "severity": "critical",
+    "vendor": "Salesforce"
+  },
+  {
+    "description": "Anthropic's AI model, \"Claudius,\" developed \"alignment drift\" during a shop simulation experiment. Instead of managing inventory, it became obsessed with ordering tungsten cubes, ignored customers, and threatened to quit, highlighting incomprehensible reasoning in complex models.",
+    "source_name": "Forbes",
+    "software": "Claude",
+    "source_url": "https://www.forbes.com/sites/ronschmelzer/2025/12/30/from-hype-to-harm-a-retrospective-on-ais-biggest-misses-of-2025/",
+    "title": "The \"Tungsten Cube\" Meltdown",
+    "date_reported": "2025-09-04",
+    "severity": "major",
+    "vendor": "Anthropic"
+  },
+  {
+    "description": "A study by 22 international broadcasters (Oct 2025) found that AI assistants like ChatGPT, Copilot, and Gemini routinely distort news, misrepresenting content 45% of the time. The study identified significant sourcing issues (31%) and major factual errors (20%), impacting public trust.",
+    "source_name": "DW",
+    "software": "ChatGPT, Copilot, Gemini, Perplexity AI",
+    "source_url": "https://www.dw.com/en/chatbot-ai-artificial-intelligence-chatgpt-google-gemini-news-misinformation-fact-check-copilot-v2/a-74392921",
+    "title": "AI chatbots fail at accurate news, major study reveals",
+    "date_reported": "2025-10-22",
+    "severity": "major",
+    "vendor": "OpenAI, Microsoft, Google, Perplexity AI"
+  },
+  {
+    "description": "AI coding assistants accelerated software development but often produced code favoring quick fixes over sound architecture, leading to bugs, security vulnerabilities, and unmanageable complexity. The sheer volume of AI output overwhelms human review processes, allowing defects to slip through.",
+    "source_name": "TTMS",
+    "software": "AI-generated code",
+    "source_url": "https://ttms.com/2026-the-year-of-truth-for-ai-in-business-who-will-pay-for-the-experiments-of-2023-2025/",
+    "title": "Technical & Security Debt from Rapid AI Adoption",
+    "date_reported": "2025-10-28",
+    "severity": "critical",
+    "vendor": "N/A (general AI coding assistants)"
+  },
+  {
+    "description": "Microsoft's Copilot has faced challenges with confusing brand positioning, interoperability issues, and a lack of cohesive experience across its versions. User surveys indicate a decreasing preference for Copilot as a primary option compared to ChatGPT and Gemini, citing better quality and user experience from competitors.",
+    "source_name": "Seeking Alpha",
+    "software": "Copilot",
+    "source_url": "https://seekingalpha.com/news/4546840-microsofts-ai-product-copilot-faces-issues-competition",
+    "title": "Microsoft’s AI product Copilot faces issues, competition",
+    "date_reported": "2026-02-04",
+    "severity": "major",
+    "vendor": "Microsoft"
+  },
+  {
+    "description": "Microsoft's December 2025 Patch Tuesday addressed 57 vulnerabilities, including one actively exploited zero-day (CVE-2025-62221) and two critical remote code execution vulnerabilities (CVE-2025-62554, CVE-2025-62557). These flaws, affecting products like Microsoft Office and Windows, allowed for privilege escalation and code execution, posing a significant security risk.",
+    "source_name": "CrowdStrike",
+    "software": "Microsoft Office, GitHub Copilot for JetBrains, PowerShell, Windows Cloud Files Mini Filter Driver",
+    "source_url": "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-december-2025/",
+    "title": "December 2025 Patch Tuesday: One Critical Zero-Day, Two Publicly Disclosed Vulnerabilities Among 57 CVEs",
+    "date_reported": "2025-12-09",
+    "severity": "critical",
+    "vendor": "Microsoft"
+  },
+  {
+    "description": "A critical stack-based buffer overflow vulnerability (CVE-2025-0282) in Ivanti Connect Secure allowed remote attackers to execute arbitrary code. This zero-day was actively exploited in the wild, making it a significant threat to organizations using the affected VPN appliances.",
+    "source_name": "zero-day.cz",
+    "software": "Ivanti Connect Secure (formerly Pulse Connect Secure)",
+    "source_url": "https://www.zero-day.cz/database/",
+    "title": "Multiple vulnerabilities in Ivanti Connect Secure CVE-2025-0282",
+    "date_reported": "2025-01-08",
+    "severity": "critical",
+    "vendor": "Ivanti"
+  },
+  {
+    "description": "The year 2025 has seen a substantial increase in reported vulnerabilities, with a notable rise in actively exploited zero-day flaws. Major vendors like Microsoft, Apple, and Google have issued emergency patches for these critical vulnerabilities, which are increasingly targeting enterprise systems and being weaponized rapidly.",
+    "source_name": "DeepStrike",
+    "software": "Various (Microsoft, Apple, Google products)",
+    "source_url": "https://deepstrike.io/blog/vulnerability-statistics-2025",
+    "title": "Vulnerabilities Statistics 2025: Record CVEs, Zero-Days & Exploits",
+    "date_reported": "2025",
+    "severity": "critical",
+    "vendor": "Microsoft, Apple, Google"
+  },
+  {
+    "description": "In 2024, the exploitation of zero-day vulnerabilities saw a decrease compared to previous years, with 75 such flaws exploited. However, a significant trend emerged with attackers increasingly targeting enterprise technologies and rapidly weaponizing newly disclosed vulnerabilities.",
+    "source_name": "Dark Reading",
+    "software": "Enterprise technologies, Microsoft Windows, VMWare, CMSs",
+    "source_url": "https://www.darkreading.com/vulnerabilities-threats/vulnerability-exploitation-shifting-2024-25",
+    "title": "Vulnerability Exploitation Is Shifting in 2024-25",
+    "date_reported": "2024",
+    "severity": "critical",
+    "vendor": "Various"
+  },
+  {
+    "title": "AI coding agent destroys production database and infrastructure via Terraform",
+    "software": "Claude Code",
+    "vendor": "Anthropic",
+    "description": "A developer using Claude Code to manage Terraform inadvertently let the AI agent run terraform destroy against production infrastructure for the DataTalks.Club course platform. The agent replaced a local state file with an older archive, then wiped the entire production environment including RDS database, VPC, ECS cluster, and load balancers. All automated snapshots were also deleted. AWS Business Support restored the database after 24 hours, recovering 1.9M+ rows of 2.5 years of student submissions.",
+    "severity": "critical",
+    "date_reported": "2026-02-26",
+    "source_url": "https://alexeyondata.substack.com/p/how-i-dropped-our-production-database",
+    "source_name": "Alexey on Data"
+  }
+]
