@@ -368,5 +368,15 @@
     "date_reported": "2026-02-26",
     "source_url": "https://alexeyondata.substack.com/p/how-i-dropped-our-production-database",
     "source_name": "Alexey on Data"
+  },
+  {
+    "title": "Clinejection: Prompt injection compromises Cline's production releases via issue triager",
+    "software": "Cline v2.3.0",
+    "vendor": "Cline",
+    "description": "An attacker exploited a prompt injection vulnerability in Cline's AI-powered GitHub issue triage workflow by crafting a malicious issue title. This triggered arbitrary command execution, which was leveraged to poison the GitHub Actions cache shared between the triage and release workflows. The poisoned cache allowed theft of NPM publishing credentials and unauthorized publication of a compromised package version containing malicious preinstall scripts. The affected v2.3.0 release has been retracted.",
+    "severity": "critical",
+    "date_reported": "2026-03-06",
+    "source_url": "https://simonwillison.net/2026/Mar/6/clinejection/",
+    "source_name": "Simon Willison"
   }
 ]
