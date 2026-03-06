@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Slopocalypse</title>
+<meta property="og:title" content="Slopocalypse">
+<meta property="og:description" content="Tracking buggy software releases as AI accelerates development. Real, reported incidents of software that shipped broken.">
+<meta property="og:image" content="/og.svg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Slopocalypse">
+<meta name="twitter:description" content="Tracking buggy software releases as AI accelerates development.">
+<meta name="twitter:image" content="/og.svg">
 <style>
 /* ═══════════════════════════════════════════════════════════
    RESET + LAYOUT
@@ -32,7 +40,7 @@ header .header-inner {
   background: #0b0b0d; padding: 2.5rem 2rem 2rem;
 }
 header h1 {
-  font-size: 2.8rem; color: #e8a308; letter-spacing: 0.12em; font-weight: 800;
+  font-size: clamp(1.4rem, 8vw, 2.8rem); color: #e8a308; letter-spacing: 0.12em; font-weight: 800;
 }
 .subtitle {
   font-size: 0.8rem; margin-top: 0.75rem; max-width: 560px;
@@ -137,6 +145,57 @@ header h1 {
 footer { text-align: center; padding: 2.5rem 0; font-size: 0.65rem; color: #3a3836; }
 footer a { color: #5a554c; }
 .loading { text-align: center; padding: 3rem; font-size: 0.8rem; color: #5a554c; }
+
+/* ═══════════════════════════════════════════════════════════
+   SUBMIT BUTTON + MODAL
+   ═══════════════════════════════════════════════════════════ */
+.submit-btn {
+  display: inline-block; margin-top: 1rem; padding: 0.5rem 1.2rem;
+  font-family: inherit; font-size: 0.7rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer;
+  background: rgba(232,163,8,0.1); border: 1px solid #e8a308; color: #e8a308;
+  border-radius: 2px; transition: all 0.15s;
+}
+.submit-btn:hover { background: rgba(232,163,8,0.2); }
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.7); align-items: center; justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: #111113; border: 1px solid #252528; border-radius: 4px;
+  padding: 2rem; width: 90%; max-width: 520px; max-height: 90vh; overflow-y: auto;
+}
+.modal h2 {
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: #e8a308; margin-bottom: 1.25rem; font-weight: 700;
+}
+.modal label {
+  display: block; font-size: 0.6rem; text-transform: uppercase;
+  letter-spacing: 0.08em; color: #7a7468; margin-bottom: 0.3rem; margin-top: 0.8rem;
+  font-weight: 600;
+}
+.modal input, .modal select, .modal textarea {
+  width: 100%; padding: 0.5rem 0.6rem; font-family: inherit; font-size: 0.72rem;
+  background: #0b0b0d; border: 1px solid #252528; color: #e0d9cc; border-radius: 2px;
+}
+.modal input:focus, .modal select:focus, .modal textarea:focus {
+  outline: none; border-color: #e8a308;
+}
+.modal textarea { resize: vertical; min-height: 60px; }
+.modal-actions { display: flex; gap: 0.5rem; margin-top: 1.25rem; justify-content: flex-end; }
+.modal-actions button {
+  padding: 0.45rem 1rem; font-family: inherit; font-size: 0.65rem; font-weight: 600;
+  cursor: pointer; border-radius: 2px; border: 1px solid #252528;
+}
+.modal-cancel { background: #1a1a1e; color: #7a7468; }
+.modal-cancel:hover { border-color: #3a3a3e; }
+.modal-submit { background: #e8a308; color: #0b0b0d; border-color: #e8a308; }
+.modal-submit:hover { background: #d4890a; }
+.modal-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+.modal-msg { font-size: 0.7rem; margin-top: 0.75rem; }
+.modal-msg.ok { color: #22c55e; }
+.modal-msg.err { color: #ef4444; }
 </style>
 </head>
 <body>
@@ -150,6 +209,7 @@ footer a { color: #5a554c; }
         Every entry below is a real, reported incident of software that shipped broken.
       </p>
       <div class="live-badge"><span class="live-dot"></span>Monitored daily via Parallel</div>
+      <button class="submit-btn" onclick="document.getElementById('submit-modal').classList.add('open')">Submit an Incident</button>
     </div>
   </header>
 
@@ -167,6 +227,37 @@ footer a { color: #5a554c; }
     Data sourced from public reporting via <a href="https://parallel.ai" target="_blank">Parallel Web Systems</a>.
     Updated daily.
   </footer>
+</div>
+
+<div class="modal-overlay" id="submit-modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal">
+    <h2>Submit an Incident</h2>
+    <form id="submit-form">
+      <label for="s-title">Title</label>
+      <input id="s-title" name="title" required placeholder="e.g. iOS 19 breaks Wi-Fi on launch day">
+      <label for="s-software">Software</label>
+      <input id="s-software" name="software" required placeholder="e.g. iOS 19">
+      <label for="s-vendor">Vendor</label>
+      <input id="s-vendor" name="vendor" required placeholder="e.g. Apple">
+      <label for="s-severity">Severity</label>
+      <select id="s-severity" name="severity">
+        <option value="major">Major</option>
+        <option value="critical">Critical</option>
+        <option value="minor">Minor</option>
+      </select>
+      <label for="s-url">Source URL</label>
+      <input id="s-url" name="source_url" type="url" placeholder="https://...">
+      <label for="s-source">Source Name</label>
+      <input id="s-source" name="source_name" placeholder="e.g. The Verge">
+      <label for="s-desc">Description</label>
+      <textarea id="s-desc" name="description" rows="3" placeholder="Brief summary of the bug and its impact"></textarea>
+      <div class="modal-actions">
+        <button type="button" class="modal-cancel" onclick="document.getElementById('submit-modal').classList.remove('open')">Cancel</button>
+        <button type="submit" class="modal-submit" id="submit-go">Submit</button>
+      </div>
+      <div class="modal-msg" id="submit-msg"></div>
+    </form>
+  </div>
 </div>
 
 <script>
@@ -280,6 +371,41 @@ function esc(s) {
 
 load();
 setInterval(load, 60000);
+
+document.getElementById("submit-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const btn = document.getElementById("submit-go");
+  const msg = document.getElementById("submit-msg");
+  btn.disabled = true;
+  msg.textContent = "Submitting...";
+  msg.className = "modal-msg";
+  const form = e.target;
+  const data = Object.fromEntries(new FormData(form));
+  try {
+    const res = await fetch("/api/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    const result = await res.json();
+    if (res.ok) {
+      msg.textContent = "Submitted! Your incident will be reviewed.";
+      msg.className = "modal-msg ok";
+      form.reset();
+      setTimeout(() => {
+        document.getElementById("submit-modal").classList.remove("open");
+        msg.textContent = "";
+      }, 2000);
+    } else {
+      msg.textContent = result.error || "Something went wrong.";
+      msg.className = "modal-msg err";
+    }
+  } catch {
+    msg.textContent = "Network error. Try again.";
+    msg.className = "modal-msg err";
+  }
+  btn.disabled = false;
+});
 </script>
 </body>
 </html>
