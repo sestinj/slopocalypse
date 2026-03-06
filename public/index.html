@@ -347,9 +347,10 @@ function renderTimeline() {
 
   let h = "";
   filtered.forEach(inc => {
+    const slug = slugify(inc.title);
     h += `<div class="incident" onclick="this.classList.toggle('expanded')">
       <div class="incident-header">
-        <div class="incident-title"><a href="${esc(inc.source_url)}" target="_blank" onclick="event.stopPropagation()">${esc(inc.title)}</a></div>
+        <div class="incident-title"><a href="/${slug}" onclick="event.stopPropagation()">${esc(inc.title)}</a></div>
         <span class="severity-badge ${inc.severity}">${inc.severity}</span>
       </div>
       <div class="incident-meta">
@@ -369,6 +370,10 @@ function esc(s) {
   const d = document.createElement("div");
   d.textContent = s;
   return d.innerHTML;
+}
+
+function slugify(title) {
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 80);
 }
 
 load();
